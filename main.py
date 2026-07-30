@@ -1,3 +1,5 @@
 n = int(input())
 nums = [int(input()) for _ in range(n)]
-# Find and print the second largest unique value
+a = list(set(nums))
+a.sort(reverse=True)
+print(a[1])
