@@ -1,5 +1,3 @@
 n = int(input())
-nums = [int(input()) for _ in range(n)]
-a = list(set(nums))
-a.sort(reverse=True)
-print(a[1])
+numbers = [int(input()) for i in range(n)]
+doubled_evens = [print(2*x) for x in numbers if x % 2 == 0]
