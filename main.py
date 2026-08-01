@@ -8,5 +8,5 @@ for name, grade in students:
     grades[grade].append(name)
 
 for grade, name in grades:
-    print(f"{grade}: {", ".join(name)}")
+    print(f'{grade}: {", ".join(name)}')
 print(students)
