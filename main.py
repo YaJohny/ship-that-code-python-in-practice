@@ -1,10 +1,7 @@
-def is_palindrome(text):
-    clean_text = text.replace(" ", "").lower()
-    return clean_text == clean_text[::-1]
+def avarage(*args):
+    sum = sum(args)
+    return sum / len(args)
 
-
-text = input()
-if is_palindrome(text):
-    print("yes")
-else:
-    print("no")
+n = int(input())
+nums = [float(input()) for _ in range(n)]
+print(avarage(*nums))
