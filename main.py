@@ -9,4 +9,3 @@ for name, grade in students.items():
 
 for grade, name in grades.items():
     print(f'{grade}: {", ".join(name)}')
-print(students)
