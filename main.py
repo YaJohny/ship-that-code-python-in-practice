@@ -1,6 +1,7 @@
-set1 = input().split()
-set2 = input().split()
+set1 = set(input().split())
+set2 = set(input().split())
 
-interection = set1 and set2
-sorted = list(interection).sort(reverse=True)
+interection = set1 & set2
+interection.sort(reverse=True)
 display = " ".join(sorted)
+print(display)
