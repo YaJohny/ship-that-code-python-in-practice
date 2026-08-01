@@ -1,15 +1,7 @@
-def min_max(numbers):
-    return min(numbers), max(numbers)
+words = input().split()
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
 
-n = int(input())
-numbers = [int(input()) for x in range(n)]
-min, max = min_max(numbers)
-
-print(f"{min}\n{max}")
-
-
-
-
-
-
-
+for x, y in counts.items:
+    print(f"{x} {y}")
