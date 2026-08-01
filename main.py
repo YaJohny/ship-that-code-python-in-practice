@@ -1,7 +1,8 @@
-set1 = set(input().split())
-set2 = set(input().split())
+def is_palindrome(text):
+    return text == text[::-1]
 
-intersection = set1 & set2
-sorted_list = sorted(intersection)
-display = " ".join(sorted_list)
-print(display)
+text = input()
+if is_palindrome(text):
+    print("yes")
+else:
+    print("no")
