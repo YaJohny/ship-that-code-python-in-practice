@@ -1,7 +1,12 @@
-words = input().split()
-counts = {}
-for word in words:
-    counts[word] = counts.get(word, 0) + 1
+from collections import defaultdict
 
-for x, y in counts.items():
-    print(f"{x} {y}")
+n = int(input())
+students = {name: grade for _ in range(n) for name, grade in input().split()}
+grades = defaultdict(list)
+
+for name, grade in students:
+    grades[grade].append(name)
+
+for grade, name in grades:
+    print(f"{grade}: {", ".join(name)}")
+print(students)
