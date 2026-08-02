@@ -14,4 +14,4 @@ for row in reader:
     total += int(row["score"])
 
 avg = total / float(n)
-print("{avg:.2f}")
+print(f"{avg:.2f}")
