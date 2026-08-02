@@ -10,6 +10,6 @@ years = int(input())
 try:
     validate_age(years)
 except ValueError as e:
-    print(f"age {e}")
+    print(e)
 else:
     print("age ok")
