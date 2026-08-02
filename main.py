@@ -11,7 +11,7 @@ data_with_header = header + '\n' + data
 reader = csv.DictReader(io.StringIO(data_with_header))
 total = 0
 for row in reader:
-    total += int(row["age"])
+    total += int(row["score"])
 
 avg = total / float(n)
 print("{avg:.2f}")
