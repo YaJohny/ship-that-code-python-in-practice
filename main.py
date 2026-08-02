@@ -1,6 +1,10 @@
-n = int(input())
-nums = {name: int(grade) for _ in range(n) for name, grade in [input().split()]}
-sorted_nums = sorted(nums, key=lambda x: nums[x], reverse=True)
-
-for name in sorted_nums:
-    print(name)
+try:
+    a = int(input())
+    b = float(input())
+    div = round(a/b, 2)
+except ZeroDivisionError:
+    print("cannot divide by zero")
+except ValueError:
+    print("invalid input")
+else:
+    print(div)
