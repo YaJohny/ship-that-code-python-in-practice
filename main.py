@@ -1,15 +1,16 @@
-def validate_age(years):
-    if years < 0:
-        raise ValueError("age must be non-negative")
-    elif years > 150:
-        raise ValueError("age too large")
-    else:
-        return years
+import csv
+import io
 
-years = int(input())
-try:
-    validate_age(years)
-except ValueError as e:
-    print(e)
-else:
-    print("age ok")
+header = input()
+n = int(input())
+
+data_list = [input() for _ in range(n)]
+data = '\n'.join(data_list)
+data_with_header = header + '\n' + data
+
+reader = csv.DictReader(io.input(data_with_header))
+total = 0
+for row in reader:
+    total += int(row["age"])
+
+print(total)
