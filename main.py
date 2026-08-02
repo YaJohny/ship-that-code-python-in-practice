@@ -1,7 +1,6 @@
-def avarage(*args):
-    args_sum = sum(args)
-    return round((args_sum / len(args)), 2)
-
 n = int(input())
-nums = [float(input()) for _ in range(n)]
-print(avarage(*nums))
+nums = {name: grade for _ in range(n) for name, grade in [input().split()]}
+nums.sort(key=lambda x: x["grade"])
+
+for name in nums.keys:
+    print(name)
