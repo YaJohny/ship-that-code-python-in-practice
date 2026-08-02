@@ -6,12 +6,11 @@ n = int(input())
 
 data_list = [input() for _ in range(n)]
 data = '\n'.join(data_list)
-data_with_header = header + '\n' + data
 
-reader = csv.DictReader(io.StringIO(data_with_header))
+reader = csv.DictReader(io.StringIO(data))
 total = 0
 for row in reader:
-    total += int(row[1])
+    total += float(row[-1])
 
-avg = total / float(n)
+avg = total / n
 print(f"{avg:.2f}")
