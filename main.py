@@ -1,10 +1,15 @@
+def validate_age(years):
+    if years < 0:
+        raise ValueError("age must be non-negative")
+    elif years > 150:
+        raise ValueError("age too large")
+    else:
+        return years
+
+years = int(input())
 try:
-    a = int(input())
-    b = float(input())
-    div = round(a/b, 2)
-except ZeroDivisionError:
-    print("cannot divide by zero")
-except ValueError:
-    print("invalid input")
+    validate_age(years)
+except ValueError as e:
+    print(f"{years} {e}")
 else:
-    print(div)
+    print(f"{years} ok")
