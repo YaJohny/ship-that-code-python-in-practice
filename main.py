@@ -1,6 +1,6 @@
 n = int(input())
-nums = {name: grade for _ in range(n) for name, grade in [input().split()]}
-nums.sort(key=lambda x: x["grade"])
+nums = {name: int(grade) for _ in range(n) for name, grade in [input().split()]}
+sorted_nums = sorted(nums, key=lambda x: x[1], reverse=True)
 
-for name in nums.keys:
+for name, _ in sorted_nums:
     print(name)
